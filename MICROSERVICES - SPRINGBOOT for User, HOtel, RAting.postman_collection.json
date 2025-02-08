@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "1a943f71-f88b-45d3-85e8-a5439461a77a",
+		"name": "MICROSERVICES - SPRINGBOOT for User, HOtel, RAting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41827110"
+	},
+	"item": [
+		{
+			"name": "USER SERVICE",
+			"item": [
+				{
+					"name": "create user - /users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bhavs C\",\r\n    \"email\": \"bhavsc@gmail.com\",\r\n    \"about\" : \"SDE2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/users"
+					},
+					"response": []
+				},
+				{
+					"name": "get alll users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/users"
+					},
+					"response": []
+				},
+				{
+					"name": "getuserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/users/356d2d35-e4ca-4eea-9250-0320ee7c290c"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HOTEL SERVICE",
+			"item": [
+				{
+					"name": "add 1 hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Moti1\",\r\n    \"location\": \"luck1\",\r\n    \"about \": \"good1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/hotels"
+					},
+					"response": []
+				},
+				{
+					"name": "get hotelById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get all hotels",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RATING SERVICE",
+			"item": [
+				{
+					"name": "create rating",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get all  ratings",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getBy Rating Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get rating By hotelid",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get rating by userId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
