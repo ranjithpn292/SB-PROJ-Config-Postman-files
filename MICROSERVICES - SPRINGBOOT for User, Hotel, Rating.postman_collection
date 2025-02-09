@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "1a943f71-f88b-45d3-85e8-a5439461a77a",
-		"name": "MICROSERVICES - SPRINGBOOT for User, HOtel, RAting",
+		"_postman_id": "2cbb5233-127b-41ea-b0e4-cbe1a0774b69",
+		"name": "MICROSERVICES - SPRINGBOOT for User, HOtel, RAting Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "41827110"
 	},
@@ -72,7 +72,8 @@
 					"name": "get hotelById",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "http://localhost:8082/hotels/12925fde-67ce-446f-b827-130c7746674c"
 					},
 					"response": []
 				},
@@ -80,7 +81,8 @@
 					"name": "get all hotels",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "http://localhost:8082/hotels"
 					},
 					"response": []
 				}
@@ -92,8 +94,18 @@
 				{
 					"name": "create rating",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8083/ratings"
 					},
 					"response": []
 				},
@@ -101,7 +113,8 @@
 					"name": "get all  ratings",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "http://localhost:8083/ratings"
 					},
 					"response": []
 				},
@@ -109,7 +122,8 @@
 					"name": "getBy Rating Id",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "http://localhost:8083/ratings/100e7d19-30d7-48ef-9ecc-c72d00a2c864"
 					},
 					"response": []
 				},
@@ -117,7 +131,8 @@
 					"name": "get rating By hotelid",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "http://localhost:8083/ratings/hotelid"
 					},
 					"response": []
 				},
@@ -125,11 +140,48 @@
 					"name": "get rating by userId",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "http://localhost:8083/ratings/userid/356d2d35-e4ca-4eea-9250-0320ee7c290c"
+					},
+					"response": []
+				},
+				{
+					"name": "delete ById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8083/ratings/a9236499-c212-4c21-a2ae-71959a89b42e"
+					},
+					"response": []
+				},
+				{
+					"name": "modify the Rating BY Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"ratingId\": \"100e7d19-30d7-48ef-9ecc-c72d00a2c864\",\r\n        \"userId\": \"356d2d35-e4ca-4eea-9250-0320ee7c290c\",\r\n        \"hotelId\": \"9d2b6317-f246-4a22-b6bb-d68b1b0c686f\",\r\n        \"rating\": 3,\r\n        \"feedback\": \"not very good - modified\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8083/ratings/100e7d19-30d7-48ef-9ecc-c72d00a2c864"
 					},
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "API Gateway Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8084/users"
+			},
+			"response": []
 		}
 	]
 }
